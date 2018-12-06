@@ -1,19 +1,9 @@
+@import 'variables.scss';
 @import 'base.scss';
 @import 'grid.scss';
-$font-head: 'Brush Script MT';
-$font-stack: 'DroidSerif';
-$primary-color: #222;
-$body-color: #bababa;
-$but-color: #c3917d;
-$text-color: #aeaeae;
-$bg-color: #fff;
-$black-color: #000;
-$ft-color: #1f1f1f;
+@import 'font-faces.scss';
 
-body {
-    font-family: $font-stack;
-    font-size: 14px;
-}
+
 .blog-title {
     font-family: $font-head;
     font-size: 72px;
@@ -21,13 +11,7 @@ body {
     font-weight: 400;
     line-height: 24px;
 }
-a {
-    text-decoration: none;
-    color: $black-color;
-}
-li {
-    list-style: none;
-}
+
 .header {
     .topnav {
         background-color: $primary-color;

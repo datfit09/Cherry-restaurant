@@ -21,11 +21,20 @@ html[xmlns] .container {
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  font-family: "DroidSerif";
+  font-size: 14px; }
+
 a {
-  transition-duration: 0.3s; }
+  transition-duration: 0.3s;
+  text-decoration: none;
+  color: #000; }
 
 img {
   max-width: 100%; }
+
+li {
+  list-style: none; }
 
 .row {
   margin-left: -15px;
@@ -184,9 +193,13 @@ img {
   .col-lg-12 {
     width: 100%; } }
 
-body {
-  font-family: "DroidSerif";
-  font-size: 14px; }
+@font-face {
+  font-family: 'DroidSerif';
+  src: url("../fonts/DroidSerif-Bold.ttf") format("truetype"), url("../fonts/DroidSerif-BoldItalic.ttf") format("truetype"), url("../fonts/DroidSerif-Italic.ttf") format("truetype"), url("../fonts/DroidSerif-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Brush Script MT';
+  src: url("../fonts/brush-script-mt-kursiv.ttf") format("truetype"), url("../fonts/BRUSHSCI.ttf") format("truetype"); }
 
 .blog-title {
   font-family: "Brush Script MT";
@@ -194,13 +207,6 @@ body {
   font-style: italic;
   font-weight: 400;
   line-height: 24px; }
-
-a {
-  text-decoration: none;
-  color: #000; }
-
-li {
-  list-style: none; }
 
 .header .topnav {
   background-color: #222; }

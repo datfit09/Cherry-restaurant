@@ -26,9 +26,18 @@ html[xmlns] .container
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: $font-stack;
+    font-size: 14px;
+}
 a {
     transition-duration: 0.3s;
+    text-decoration: none;
+    color: $black-color;
 }
 img {
     max-width: 100%;
+}
+li {
+    list-style: none;
 }
