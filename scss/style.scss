@@ -1,7 +1,21 @@
 @import 'base.scss';
 @import 'grid.scss';
-h1 {
-    font-family: 'Brush Script MT', serif;
+$font-head: 'Brush Script MT';
+$font-stack: 'DroidSerif';
+$primary-color: #222;
+$body-color: #bababa;
+$but-color: #c3917d;
+$text-color: #aeaeae;
+$bg-color: #fff;
+$black-color: #000;
+$ft-color: #1f1f1f;
+
+body {
+    font-family: $font-stack;
+    font-size: 14px;
+}
+.blog-title {
+    font-family: $font-head;
     font-size: 72px;
     font-style: italic;
     font-weight: 400;
@@ -9,14 +23,14 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: $black-color;
 }
 li {
     list-style: none;
 }
 .header {
     .topnav {
-        background-color: #222222;
+        background-color: $primary-color;
         .container {
             height: 113px;
             display: flex;
@@ -32,7 +46,7 @@ li {
     font-size: 18px;
     font-weight: bold;
     a {
-        color: #fff;
+        color: $bg-color;
         text-transform: uppercase;
     }
 }
@@ -46,9 +60,9 @@ li {
             line-height: 24px;
             text-align: center;
             padding: 30px 15px;
-            color: #fff;
+            color: $bg-color;
             &:hover {
-                color: #f00;
+                color: #c3917d;
             }
         }
     }
@@ -80,6 +94,10 @@ li {
         }
     }
 }
+.blog-text{
+    line-height:24px;
+    margin: 20px 0 30px 0;
+}
 .container {
     .row {
         .content {
@@ -96,8 +114,8 @@ li {
     width: 100%;
     padding-left: 20px;
     margin-top: 35px;
-    border-left: 3px solid #c3917d;
-    color: #aeaeae;
+    border-left: 3px solid $but-color;
+    color: $text-color;
     font-size: 18px;
     font-weight: 700;
     font-style: italic;
@@ -113,7 +131,7 @@ li {
             content: '';
             width: 5px;
             height: 5px;
-            background-color: #c3917d;
+            background-color: $but-color;
             position: absolute;
             top: 7px;
             left: 0;
@@ -130,27 +148,27 @@ li {
         flex-grow: 1;
         font-size: 13px;
         a {
-            color: #aeaeae;
+            color: $text-color;
             &:after {
                 content: ',';
-                color: #aeaeae;
+                color: $text-color;
             }
             ;
         }
         .tag-active {
-            color: #c3917d;
+            color: $but-color;
         }
         ;
     }
     .social {
         .social-tag {
-            color: #aeaeae;
+            color: $text-color;
             font-size: 16px;
             span {
                 padding-left: 12px;
             }
             &.active, &:hover {
-                color: #000;
+                color: $black-color;
             }
         }
     }
@@ -158,9 +176,9 @@ li {
 .athour-box {}
 .comment-item {
     display: inline-block;
-    background-color: #fff;
+    background-color: $bg-color;
     padding: 30px 0;
-    border: 1px solid #aeaeae;
+    border: 1px solid $text-color;
     border-right: none;
     border-left: none;
 }
@@ -187,9 +205,9 @@ li {
                 padding-left: 12px;
                 font-size: 16px;
                 span {
-                    color: #aeaeae;
+                    color: $text-color;
                     &:hover {
-                        color: #000;
+                        color: $black-color;
                     }
                     ;
                 }
@@ -197,11 +215,11 @@ li {
         }
     }
     .comment-text {
-        color: #aeaeae;
+        color: $text-color;
     }
 }
 .comments {
-    border-bottom: 1px solid #aeaeae;
+    border-bottom: 1px solid $text-color;
 }
 .comment-total-title {
     font-size: 16px;
@@ -219,13 +237,13 @@ li {
             padding-bottom: 0;
         }
         .comment-time {
-            color: #aeaeae;
+            color: $text-color;
             padding: 10px 0 20px 0;
             font-size: 12px;
             font-style: italic;
         }
         .comment-text {
-            color: #000;
+            color: $black-color;
             margin-bottom: 30px;
         }
     }
@@ -244,13 +262,13 @@ li {
         align-items: center;
         margin-bottom: 15px;
         p {
-            color: #aeaeae;
+            color: $text-color;
             width: 100px;
         }
         input {
             border-radius: 3px;
             border: 1px solid #e5e5e5;
-            background-color: #fff;
+            background-color: $bg-color;
             width: 270px;
             height: 35px;
         }
@@ -262,7 +280,7 @@ li {
     }
     button {
         font-family: 'Roboto';
-        color: #aeaeae;
+        color: $text-color;
         line-height: 24px;
         padding: 6px 30px;
         border-radius: 30px;
@@ -271,14 +289,22 @@ li {
         margin-top: 15px;
         cursor: pointer;
         &:hover{
-            color: #f00;
+            color: #c3917d;
             font-weight: bold;
-            background-color: #222222;
+            background-color: $primary-color;
         }
     }
 }
 /*-Blog -grid site*/
 .blog{
+    img{
+        opacity: 0.8;
+        transition-duration: 0.3s;
+        rotate
+        &:hover{
+            opacity: 1;
+        }
+    }
 }
 .blog-post{
     margin: 30px 0;
@@ -290,8 +316,8 @@ li {
 }
 
 .blog-info.blog{
-    color: #bababa;
-    font-family: 'Myriad Pro';
+    color: $body-color;
+    font-family: $font-stack;
     justify-content: flex-start;
     li{
         padding: 0 30px 0 0;
@@ -300,10 +326,10 @@ li {
 .blog-follow {
     text-align: center;
     padding: 50px 10px;
-    border: 1px solid #bababa;
+    border: 1px solid $body-color;
     margin: 20px 0;
     .link-follow{
-        color: #bababa;
+        color: $body-color;
         font-style: italic;
         span{
             margin-right: 10px;
@@ -324,8 +350,8 @@ li {
     margin-bottom: 100px;
 } 
 .button-load, .button-load a{
-    color: #fff;
-    background-color: #c3917d;
+    color: $bg-color;
+    background-color: $but-color;
     border: none;
     border-radius: 3px;
     padding: 5px 10px;
@@ -345,6 +371,7 @@ button.button-load.fa.fa-spinner{
     }
 }
 .title{
+    font-family: $font-stack;
     text-transform: uppercase;
     margin-top: 50px;
     margin-bottom: 35px;
@@ -354,9 +381,9 @@ button.button-load.fa.fa-spinner{
     input{
         width: 300px;
         height: 40px;
-        border: 1px solid #bababa;
+        border: 1px solid $body-color;
         padding-left: 20px;
-        color: #bababa;     
+        color: $body-color;     
     }
     .search-button{
         position: absolute;
@@ -365,7 +392,7 @@ button.button-load.fa.fa-spinner{
         top: 10px;
         margin-left: -30px;
         border: none;
-        background-color: #fff;
+        background-color: $bg-color;
     }
 } 
 
@@ -373,30 +400,31 @@ button.button-load.fa.fa-spinner{
     li{
         position: relative;
         padding-left: 15px;
+        margin: 10px 0;
         &:hover:before{
-            background-color: #000;
+            background-color: $black-color;
         }
         &:before{
             content: '';
             width: 8px;
             height: 2px;
-            background-color: #bababa;
+            background-color: $body-color;
             display: inline-block;
             position: absolute;
             top: 8px;
             left: 0;
         }
         a{
-           color: #bababa;
+           color: $body-color;
            &:hover{
-                color: #000;
+                color: $black-color;
            }
         }
     }
 }
 
-.calender-table{
-
+.calendar{
+    margin-bottom: 50px
 }
 
 .calender-table.hasDatepicker{
@@ -435,7 +463,7 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
 /*Footer*/ 
 .footer {
     padding: 40px 0 0 0;
-    background-color: #222222;
+    background-color: $primary-color;
     .footer-widget {
         .container{
             text-align: center;
@@ -457,9 +485,9 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
 
 .footer-quick-link{
     padding: 40px 0 70px 0;
-    border-bottom: 1px solid #1f1f1f;
+    border-bottom: 1px solid $ft-color;
     .quick-link{
-        color: #c3917d;
+        color: $but-color;
         span{
             margin-left: 20px;
         }
@@ -469,7 +497,7 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
     }
 }
 .ft-end{
-    background-color: #1f1f1f;
+    background-color: $ft-color;
     border-top: 1px solid #262626;
     padding-bottom: 60px;
     text-align: center;
@@ -489,7 +517,7 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
     .copyright{
         color: #616161;
         span{
-            color: #c3917d;
+            color: $but-color;
         }
     }
 }
@@ -506,10 +534,21 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
 }
 
 @media ( max-width: 992px ) {
+    .blog, .slide-bar{
+        margin: 0 10%;
+    }
+
     .blog-title{
         font-size: 50px;
         line-height: 40px;
     }
+
+    .calendar{
+        width: 50%;
+    }
+}
+
+@media ( min-width: 991px ) {
 }
 
 /*---------------------------------------------------------------------------Menu mobile------------------------------------------------------------------------------------*/
@@ -519,7 +558,7 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
     position: absolute;
     right: 0;
     background-color: transparent;
-    color: #fff;
+    color: $bg-color;
     cursor: pointer;
     border: none;
 }
@@ -551,8 +590,8 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
 }
 
 .btn-close {
-    color: #f00;
-    background: #fff;
+    color: #c3917d;
+    background: $bg-color;
     width: 40px;
     height: 40px;
     display: flex !important;
@@ -576,8 +615,8 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
         bottom: 0;
         width: 260px;
         z-index: 100;
-        background: #fff;
-        color: #000;
+        background: $bg-color;
+        color: $black-color;
         transform: translateX( 100%);
         transition-duration: 0.3s;
     }
@@ -600,9 +639,9 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w{
                 line-height: 24px;
                 text-align: center;
                 padding: 15px;
-                color: #000;
+                color: $black-color;
                 &:hover {
-                    color: #f00;
+                    color: #c3917d;
                 }
             }
         }

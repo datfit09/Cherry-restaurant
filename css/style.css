@@ -21,10 +21,6 @@ html[xmlns] .container {
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  font-family: 'DroidSerif', 'Lato', sans-serif;
-  font-size: 14px; }
-
 a {
   transition-duration: 0.3s; }
 
@@ -188,8 +184,12 @@ img {
   .col-lg-12 {
     width: 100%; } }
 
-h1 {
-  font-family: 'Brush Script MT', serif;
+body {
+  font-family: "DroidSerif";
+  font-size: 14px; }
+
+.blog-title {
+  font-family: "Brush Script MT";
   font-size: 72px;
   font-style: italic;
   font-weight: 400;
@@ -203,7 +203,7 @@ li {
   list-style: none; }
 
 .header .topnav {
-  background-color: #222222; }
+  background-color: #222; }
   .header .topnav .container {
     height: 113px;
     display: flex;
@@ -231,7 +231,7 @@ li {
       padding: 30px 15px;
       color: #fff; }
       .menu li a:hover {
-        color: #f00; }
+        color: #c3917d; }
 
 .container .block {
   padding: 100px 0; }
@@ -252,6 +252,10 @@ li {
     padding: 18px; }
     .blog-info li span {
       padding-right: 10px; }
+
+.blog-text {
+  line-height: 24px;
+  margin: 20px 0 30px 0; }
 
 .container .row .content .post-text .para {
   padding: 35px 0 0 0; }
@@ -400,11 +404,17 @@ li {
     margin-top: 15px;
     cursor: pointer; }
     .form-comment button:hover {
-      color: #f00;
+      color: #c3917d;
       font-weight: bold;
-      background-color: #222222; }
+      background-color: #222; }
 
 /*-Blog -grid site*/
+.blog img {
+  opacity: 0.8;
+  transition-duration: 0.3s; }
+  rotate .blog img:hover {
+    opacity: 1; }
+
 .blog-post {
   margin: 30px 0; }
 
@@ -415,7 +425,7 @@ li {
 
 .blog-info.blog {
   color: #bababa;
-  font-family: 'Myriad Pro';
+  font-family: "DroidSerif";
   justify-content: flex-start; }
   .blog-info.blog li {
     padding: 0 30px 0 0; }
@@ -458,6 +468,7 @@ button.button-load.fa.fa-spinner {
   margin-top: 0; }
 
 .title {
+  font-family: "DroidSerif";
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 35px; }
@@ -481,7 +492,8 @@ button.button-load.fa.fa-spinner {
 
 .list-category li, .rec-post li {
   position: relative;
-  padding-left: 15px; }
+  padding-left: 15px;
+  margin: 10px 0; }
   .list-category li:hover:before, .rec-post li:hover:before {
     background-color: #000; }
   .list-category li:before, .rec-post li:before {
@@ -497,6 +509,9 @@ button.button-load.fa.fa-spinner {
     color: #bababa; }
     .list-category li a:hover, .rec-post li a:hover {
       color: #000; }
+
+.calendar {
+  margin-bottom: 50px; }
 
 .calender-table.hasDatepicker {
   border: 1px solid #e6e6e6; }
@@ -524,7 +539,7 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w {
 /*Footer*/
 .footer {
   padding: 40px 0 0 0;
-  background-color: #222222; }
+  background-color: #222; }
   .footer .footer-widget .container {
     text-align: center; }
     .footer .footer-widget .container .footer-logo h2 {
@@ -576,9 +591,13 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w {
     padding: 5px; } }
 
 @media (max-width: 992px) {
+  .blog, .slide-bar {
+    margin: 0 10%; }
   .blog-title {
     font-size: 50px;
-    line-height: 40px; } }
+    line-height: 40px; }
+  .calendar {
+    width: 50%; } }
 
 /*---------------------------------------------------------------------------Menu mobile------------------------------------------------------------------------------------*/
 .toggle-menu-btn {
@@ -615,7 +634,7 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w {
     display: none !important; } }
 
 .btn-close {
-  color: #f00;
+  color: #c3917d;
   background: #fff;
   width: 40px;
   height: 40px;
@@ -661,6 +680,6 @@ a.ui-datepicker-next.ui-corner-all, span.ui-icon.ui-icon-circle-triangle-w {
       padding: 15px;
       color: #000; }
       .menu li a:hover {
-        color: #f00; }
+        color: #c3917d; }
   .topnav .menu li:before {
     content: none; } }
