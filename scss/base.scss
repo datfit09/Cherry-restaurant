@@ -1,0 +1,38 @@
+.clearfix:after,
+.container:after
+{
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+html[xmlns] .clearfix,
+html[xmlns] .container
+{
+  display: block;
+}
+
+* html .clearfix,
+* html .container
+{
+  height: 1%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'DroidSerif', 'Lato', sans-serif;
+    font-size: 14px;
+}
+a {
+    transition-duration: 0.3s;
+}
+img {
+    max-width: 100%;
+}

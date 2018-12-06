@@ -1,0 +1,18 @@
+{
+  "name": "cherry",
+  "version": "1.0.0",
+  "description": "This is first Sass project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test comand",
+    "scss": "node-sass --w scss/style.scss css/style.css"
+  },
+  "keywords": [
+    "cherry"
+  ],
+  "author": "mr.dat",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
